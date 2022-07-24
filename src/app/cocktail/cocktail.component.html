@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<div class="col-xl-5">
+  <form>
+    <div class="mb-3">
+      <label for="serverNameInput" class="form-label">Server Name</label>
+      <input type="email" class="form-control" id="serverNameInput" name="server-name"
+             [(ngModel)]="serverName">
+    </div>
+    <div class="mb-3">
+      <label for="serverDescriptionInput" class="form-label">Server Description</label>
+      <input type="text" class="form-control" id="serverDescriptionInput" name="server-description"
+             [(ngModel)]="serverDescription" required>
+    </div>
+    <div class="mb-3" id="buttons">
+      <button class="btn btn-primary me-3"
+              [disabled]="serverName.length === 0 && serverDescription.length === 0"
+              (click)="onClickServer()"
+      >
+        Add Server
+      </button>
+      <button class="btn btn-info me-3"
+              [disabled]="serverName.length === 0 && serverDescription.length === 0"
+              (click)="onClickServerBluePrint()"
+      >
+        Add Server Blueprint
+      </button>
+      <button class="btn btn-secondary"
+              [disabled]="serverName.length === 0 && serverDescription.length === 0"
+              (click)="clearFormInputs()"
+      >
+        Clear
+      </button>
+    </div>
+  </form>
+</div>

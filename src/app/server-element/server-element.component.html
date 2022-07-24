@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<div class="card mb-2">
+  <h5 class="card-header">{{ element.name }} ({{ element.type }})</h5>
+  <div
+    class="card-body p-2 text-center"
+    [ngClass]="element.type === 'server' ? 'bg-primary text-white' : 'bg-info'"
+    >
+    <p class="card-text">{{ element.description }}</p>
+  </div>
+</div>
